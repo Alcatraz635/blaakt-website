@@ -4,7 +4,12 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "stickUp": "^0.5.7",
+    "wow": "wowjs#^1.1.2",
+    "font-awesome": "^4.6.3",
+    "jquery-smooth-scroll": "^2.0.1",
+    "parallax.js": "^1.4.2"
   },
   "overrides": {
     "bootstrap-sass": {

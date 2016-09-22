@@ -13,6 +13,7 @@
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -26,30 +27,169 @@
 </head>
 
 <body>
-  <!--[if lt IE 10]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-  <div class="container">
-    <div class="hero">
-      <span class="hero-text">BLAAKT</span>
-    </div>
-    <div class="navigation">
-      <div class="row">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-2  nav-item">
-          <span class="nav-text">ABOUT</span>
-        </div>
-        <div class="col-xs-2 nav-item">
-          <span class="nav-text">MUSIC</span>
-        </div>
-        <div class="col-xs-2 nav-item">
-          <span class="nav-text">CONTACT</span>
-        </div>
-        <div class="col-xs-3"></div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+      <div class="container topnav">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand topnav" href="#">BLAAKT</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a onclick="return true;" class="nav-about">About</a>
+                  </li>
+                  <li>
+                      <a onclick="return true;" class="nav-music">Music</a>
+                  </li>
+                  <li>
+                      <a onclick="return true;" class="nav-contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
       </div>
-    </div>
+      <!-- /.container -->
+  </nav>
+
+
+  <!-- Header -->
+  <a name="about"></a>
+  <div class="parallax-window intro-header" data-parallax="scroll" data-image-src="images/hero.jpeg">
+
+      <div class="container">
+
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="intro-message">
+                      <h1 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">BLAAKT</h1>
+                      <h3 class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">Lorem ipsum dolor sit amet</h3>
+                      <hr class="intro-divider">
+                      <ul class="list-inline intro-social-buttons">
+                          <li>
+                              <a href="#" class="btn btn-default btn-lg wow fadeIn" data-wow-duration="1s" data-wow-delay="2s"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                          </li>
+                          <li>
+                              <a href="#" class="btn btn-default btn-lg wow fadeIn" data-wow-duration="1s" data-wow-delay="2.3s"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                          </li>
+                          <li>
+                              <a href="#" class="btn btn-default btn-lg wow fadeIn" data-wow-duration="1s" data-wow-delay="2.6s"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
   </div>
+  <!-- /.intro-header -->
+
+  <!-- Page Content -->
+
+<a  name="services"></a>
+  <div class="content-section-a">
+
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-7">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">About:</h2>
+                  <p class="lead section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="col-sm-4">
+                  <img class="img-responsive section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" src="/images/headphones.png" alt="" >
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-a -->
+
+  <div class="content-section-music">
+
+      <div class="container">
+
+          <div class="row">
+
+              <div class="col-sm-4 col-sm-push-8">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">Music:</h2>
+                  <p class="lead wow fadeIn" data-wow-duration="1s" data-wow-delay="1.5s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <div class="col-sm-8 col-sm-pull-4">
+                  <iframe width="100%" class="wow fadeIn" data-wow-duration="1s" data-wow-delay="1s" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/145780540&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-b -->
+
+  <div class="content-section-c">
+
+      <div class="container">
+
+          <div class="row">
+              <div class="col-lg-5 col-sm-6">
+                  <hr class="section-heading-spacer">
+                  <div class="clearfix"></div>
+                  <h2 class="section-heading">Contact:</h2>
+                  <p class="lead"></p>
+              </div>
+              <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+              </div>
+          </div>
+
+      </div>
+      <!-- /.container -->
+
+  </div>
+  <!-- /.content-section-a -->
+
+  <!-- /.banner -->
+
+  <!-- Footer -->
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <ul class="list-inline">
+                      <li>
+                          <a href="#">Home</a>
+                      </li>
+                      <li class="footer-menu-divider">&sdot;</li>
+                      <li>
+                          <a onclick="return true;" class="nav-about">About</a>
+                      </li>
+                      <li class="footer-menu-divider">&sdot;</li>
+                      <li>
+                          <a onclick="return true;" class="nav-music">Music</a>
+                      </li>
+                      <li class="footer-menu-divider">&sdot;</li>
+                      <li>
+                          <a onclick="return true;" class="nav-contact">Contact</a>
+                      </li>
+                  </ul>
+                  <p class="copyright text-muted small">Copyright &copy; Tyler Schumacher 2016. All Rights Reserved</p>
+              </div>
+          </div>
+      </div>
+  </footer>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
     (function(b, o, i, l, e, r) {
@@ -71,6 +211,9 @@
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/wow/dist/wow.js"></script>
+  <script src="/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
+  <script src="/bower_components/parallax.js/parallax.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -87,9 +230,15 @@
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+
+
+  </script>
   <!-- endbuild -->
 
   <!-- build:js scripts/main.js -->
+  <script type="text/javascript">
+    new WOW().init();
+  </script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>

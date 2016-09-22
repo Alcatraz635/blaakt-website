@@ -1,13 +1,23 @@
-@import 'https://fonts.googleapis.com/css?family=Cabin';
-// bower:scss
+@import 'https://fonts.googleapis.com/css?family=Cabin'; // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bower_components/font-awesome/scss/font-awesome.scss"; // endbower
+//variables
 $icon-font-path: '../fonts/';
 $black: RGB(1, 1, 1);
+$black-t: RGBA(1, 1, 1, .7);
 $white: RGB(241, 244, 246);
 $accent-b: RGB(70,9,6);
 $accent-g: RGB(38,38,38);
 $cabin: 'Cabin';
+//mixins
+@mixin parralax($img) {
+  background: url($img) no-repeat center center;
+  min-height: 750px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -15,70 +25,228 @@ $cabin: 'Cabin';
   color: #000;
   padding: 0.2em 0;
 }
-
-body {
-  font-family: $cabin, sans-serif;
-  background:black url('../images/background.jpg') bottom no-repeat;
-    background-size:100%;
-}
-
-.container{
-  width:100%;
- height: 1200px;
-  padding:0px;
-
-}
-//========== HERO ==================//
-.hero{
+//GENERAL
+body,
+html {
   width: 100%;
-  height:30%;
-  background: black;
-  color: $white;
-  position:relative;
-}
-.hero-text{
-  font-size:14vw;
-  line-height:132px;
-  position: absolute;
-  top: 35%;
-  right:7.5%;
-  background: linear-gradient(330deg, $accent-g 0%, $white 25%, $accent-b 50%, $white 75%, $accent-g 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display:none;
+  height: 100%;
+  font-family: $cabin,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
 
+a {
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -ms-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+hr.section-heading-spacer {
+    margin-top: 0px;
+}
 //NAVIGATION
-.navigation{
-  text-align:center;
-  background:$white;
-  height:5%;
+.topnav {
+  font-size: 14px;
+}
 
-  .row{
-    height:100%;
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+  cursor: pointer;
+}
 
+.navbar-default {
+  background-color: $black-t !important;
+  border-color: $black-t !important;
+
+  a:hover {
+    color: $accent-b !important;
   }
 }
-.nav-item{
-  border: 1px solid #000;
-  height: 100%;
+
+.navbar-default .navbar-brand {
+  color: $white;
+  cursor: pointer;
 }
-.sliding-middle-out {
-	display: inline-block;
-	position: relative;
-	padding-bottom: 3px;
+//HERO
+.lead {
+  font-size: 18px;
+  font-weight: 400;
 }
-.sliding-middle-out:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 3px;
-	width: 0px;
-	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
+
+.intro-header {
+  padding-top: 50px;
+  /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+  @include parralax("../images/hero.jpeg")
 }
-.sliding-middle-out:hover:after {
-	width: 100%;
-	background: blue;
+
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  h1{
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+
+      }
+    .btn-default {
+      color: RGB(1, 1, 1);
+      background-color: $white;
+      border-color: $black;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear;
+
+      &:hover{
+        background: $accent-b;
+        color: $white;
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+  }
+}
+
+
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+
+
+//MUSIC SECTION
+.content-section-music {
+  color: $white;
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  @include parralax("../images/fire.jpg")
+}
+//MEDIA QUERIES
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}
+
+.network-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.content-section-a {
+  padding: 50px 0;
+  background-color: #f8f8f8;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+  padding: 100px 0;
+  color: #f8f8f8;
+  background: url("../images/banner-bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.banner h2 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 3em;
+}
+
+.banner ul {
+  margin-bottom: 0;
+}
+
+.banner-social-buttons {
+  float: right;
+  margin-top: 0;
+}
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+@media(max-width:767px) {
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+  }
+
+  ul.banner-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.banner-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #f8f8f8;
+
+  a{
+    color: $accent-b;
+  }
+}
+
+p.copyright {
+  margin: 15px 0 0;
 }
