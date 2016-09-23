@@ -12,7 +12,7 @@ $(document).ready( () => {
      },
      scrollContainer: null // optional scroll container selector, otherwise use window
    }
- );
+ ); 
  wow.init();
 
   //Event handlers
@@ -31,5 +31,7 @@ $(document).ready( () => {
       scrollTarget: '.content-section-c'
     })
   })
+
+
 
 });

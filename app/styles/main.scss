@@ -1,14 +1,16 @@
 @import 'https://fonts.googleapis.com/css?family=Cabin'; // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss"; // endbower
+
 //variables
 $icon-font-path: '../fonts/';
 $black: RGB(1, 1, 1);
 $black-t: RGBA(1, 1, 1, .7);
 $white: RGB(241, 244, 246);
-$accent-b: RGB(70,9,6);
+$accent-o: RGB(253,95,0);
 $accent-g: RGB(38,38,38);
 $cabin: 'Cabin';
+
 //mixins
 @mixin parralax($img) {
   background: url($img) no-repeat center center;
@@ -49,8 +51,12 @@ a {
   -ms-transition: all 0.6s linear;
   -o-transition: all 0.6s linear;
   transition: all 0.6s linear;
+  color: $accent-o;
+    cursor:pointer;
 }
-
+a:hover{
+  color: $black;
+}
 hr.section-heading-spacer {
     margin-top: 0px;
 }
@@ -69,7 +75,7 @@ hr.section-heading-spacer {
   border-color: $black-t !important;
 
   a:hover {
-    color: $accent-b !important;
+    color: $accent-o !important;
   }
 }
 
@@ -77,6 +83,50 @@ hr.section-heading-spacer {
   color: $white;
   cursor: pointer;
 }
+.nav-contact{
+  cursor:pointer;
+}
+CSS
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: $accent-o;
+}
+
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: $accent-o;
+}
+
+
 //HERO
 .lead {
   font-size: 18px;
@@ -89,7 +139,7 @@ hr.section-heading-spacer {
   padding-bottom: 50px;
   text-align: center;
   color: #f8f8f8;
-  @include parralax("../images/hero.jpeg")
+  @include parralax("../images/hero-b&w.jpg")
 }
 
 .intro-message {
@@ -113,7 +163,7 @@ hr.section-heading-spacer {
       transition: all 0.3s linear;
 
       &:hover{
-        background: $accent-b;
+        background: $accent-o;
         color: $white;
         -moz-transform: scale(1.1);
         -webkit-transform: scale(1.1);
@@ -136,6 +186,24 @@ hr.section-heading-spacer {
   text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+
+
+
+//ABOUT SECTION
+.matt-image-container{
+  height:361px
+}
+.matt-image {
+    position: absolute;
+    bottom: -52px;
+    left: 100px;
+    max-height: 425px;
+    -moz-transform: rotate(.5deg);
+    -webkit-transform: rotate(.5deg);
+    -o-transform: rotate(.5deg);
+    -ms-transform: rotate(.5deg);
+    transform: rotate(.5deg);
+}
 
 
 //MUSIC SECTION
@@ -185,6 +253,24 @@ hr.section-heading-spacer {
 
 .section-heading {
   margin-bottom: 30px;
+  //visibility: hidden;
+}
+.social-media-icon{
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.social-media-icon:hover {
+    border: solid $accent-o;
+    border-radius: 90px;
+}
+.social-media .col-xs-4 {
+    padding: 20px;
+}
+.social-media-header{
+  padding-top:70px;
 }
 
 .section-heading-spacer {
@@ -226,6 +312,15 @@ hr.section-heading-spacer {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 3em;
   }
+  .social-media-header{
+    padding-top:0px;
+  }
+  .intro-header {
+    @include parralax("../images/hero-b&w-mobile.jpg")
+  }
+  .matt-image {
+      left: 0px;
+  }
 
   ul.banner-social-buttons > li {
     display: block;
@@ -243,7 +338,7 @@ footer {
   background-color: #f8f8f8;
 
   a{
-    color: $accent-b;
+    color: $accent-o;
   }
 }
 
