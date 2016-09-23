@@ -161,6 +161,7 @@ CSS
       -ms-transition: all 0.3s linear;
       -o-transition: all 0.3s linear;
       transition: all 0.3s linear;
+      min-width: 177px;
 
       &:hover{
         background: $accent-o;
@@ -334,6 +335,40 @@ CSS
   }
 }
 
+@media(max-width:767px) {
+  .intro-header {
+    background: linear-gradient(218deg, #fd5f00, #010101);
+background-size: 400% 400%;
+
+-webkit-animation: hero-mobile 6s ease infinite;
+-moz-animation: hero-mobile 6s ease infinite;
+-o-animation: hero-mobile 6s ease infinite;
+animation: hero-mobile 6s ease infinite;
+
+@-webkit-keyframes hero-mobile {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-moz-keyframes hero-mobile {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@-o-keyframes hero-mobile {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+@keyframes hero-mobile {
+    0%{background-position:0% 99%}
+    50%{background-position:100% 2%}
+    100%{background-position:0% 99%}
+}
+  }
+
+
+}
 footer {
   padding: 50px 0;
   background-color: #f8f8f8;
