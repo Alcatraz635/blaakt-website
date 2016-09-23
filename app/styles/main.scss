@@ -261,6 +261,7 @@ CSS
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+  max-width:100px;
 }
 .social-media-icon:hover {
     border: solid $accent-o;
